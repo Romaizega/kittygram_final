@@ -161,4 +161,8 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: Деплой выполнен. Well Done!
+        message: |
+          🚀Деплой успешно выполнен🚀!
+          Push made: ${{ github.actor }}
+          Commit Message: ${{ github.event.commits[0].message }}
+          Commit Link: [${{ github.sha }}](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
