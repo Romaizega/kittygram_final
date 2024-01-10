@@ -30,7 +30,7 @@ services:
     image: romaizega/kittygram_gateway
     env_file: .env
     volumes:
-      - static:/staticfiles/
+      - static:/static/
       - media:/app/media/
     depends_on:
       - backend
